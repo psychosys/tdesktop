@@ -89,6 +89,16 @@ Go to ***BuildPath*** and run
     sudo make install
     cd ..
 
+    sudo apt-get install libpciaccess-dev
+    git clone https://salsa.debian.org/xorg-team/lib/libdrm
+    cd libdrm
+    git checkout libdrm-2.4.95-1
+    ./autogen.sh
+    ./configure --enable-static
+    make
+    sudo make install
+    cd ..
+    
     git clone https://github.com/FFmpeg/FFmpeg.git ffmpeg
     cd ffmpeg
     git checkout release/3.4
